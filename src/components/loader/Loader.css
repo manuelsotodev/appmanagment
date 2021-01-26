@@ -1,0 +1,20 @@
+.loader {
+    text-align: center;
+  }
+  
+  .loader-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  
+  
+  .loader-header {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+  }

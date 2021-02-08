@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import Header from './header/Header.js'
 import './SignIn.css'
 
@@ -21,9 +22,11 @@ class SingIn extends Component {
                     </div>
                     <button type="submit" className="btn btn-sm btn-success shadow btn-block mt-5 rounded-0">Ingresar</button>
                 </form>
-                <div className='row mt-4 mb-5 text-center d-flex justify-content-center'>
+                <div className='row mt-4 mb-5 text-center d-flex justify-content-center'>  
                     <a href='?' className="col-sm-3 text-muted text-decoration-none ">¿Olvidaste tu contraseña?</a>
-                    <a href='?' className="col-sm-3 text-primary text-decoration-none ">Crea una cuenta</a>
+                    <Link to="/Create">
+                        <a className="col-sm-3 text-primary text-decoration-none ">Crea una cuenta</a>
+                    </Link>
                 </div>
               </div>
           </div>  

@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+// Archivo para las rutas
+import Rutas from './routes/Rutas'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Rutas />
   </React.StrictMode>,
   document.getElementById('root')
 );

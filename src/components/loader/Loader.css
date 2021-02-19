@@ -1,5 +1,6 @@
 .loader {
     text-align: center;
+    z-index: 4000;
   }
   
   .loader-logo {

@@ -13,35 +13,49 @@ const Seguridad = () =>{
 
     
     useEffect(() =>{
+        let isActive = true;
         firebase.auth().onAuthStateChanged((user) =>{
-            if(user){
-                if(user.emailVerified){
-                    setSeguridad(true)
-                    setLoading(false)
+            if(isActive){
+                if(user){
+                    if(user.emailVerified){
+                        setSeguridad(true)
+                        setTimeout(()=>{
+                            setLoading(false)
+                          }, 1000)
+                    }else{
+                        setSeguridad(false)
+                        setTimeout(()=>{
+                            setLoading(false)
+                          }, 1000)
+                    }
                 }else{
                     setSeguridad(false)
-                    setLoading(false)
+                    setTimeout(()=>{
+                        setLoading(false)
+                      }, 1000)
                 }
-            }else{
-                setSeguridad(false)
-                setLoading(false)
             }
+
         })
+        return () => {
+            isActive = false;
+        };
     },[])
     
 
     if(loading){
         return(
-            <Loader />
-        )
+            <Loader />  
+        );
+    }else{
+        return (
+            <div>
+                {seguridad && <Redirect to="/" />} 
+                <Form />
+            </div>
+        );
     }
-    return (
-        <div>
-            {seguridad && <Redirect to="/" />}
-            <Form />
-        </div>
 
-    );
     
 }
 

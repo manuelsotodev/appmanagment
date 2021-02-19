@@ -8,7 +8,7 @@ class Loader extends Component {
         return (
             <div className="loader">
               <header className="loader-header">
-                <img src={loader} className="loader-logo" alt="logo" />
+                <img src={loader} className="loader-logo mx-auto mt-0" alt="logo" />
                 <h2 className="font-weight-light">App Managment</h2>
               <div className="fixed-bottom">
                 <p className="font-weight-light mb-0">Powered by</p>
